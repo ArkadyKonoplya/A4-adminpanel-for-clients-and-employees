@@ -1,0 +1,62 @@
+
+.header-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .nav-item{
+        .nav-link{
+            display: inline-block;
+            margin-left: 10px;
+            i{
+                font-size: 24px;
+            }
+        }
+    }
+    .search_bar{
+        position: relative;
+        .dropdown-menu {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border: 0px;
+            @include respond('phone'){
+                top: 80px;
+                left: -85px;
+            }
+            @include respond('phone-land'){
+                top: 80px;
+                left: -85px;
+            }
+        }
+        .form-control{
+            min-width: 300px;
+            position: absolute;
+            background: $body-bg;
+            @include respond('phone'){
+                background: $white;
+            }
+            @include respond('phone-land'){
+                background: $white;
+            }
+            &:hover,&:focus,&.active{
+                border-color: transparent;
+                @include respond('phone'){
+                    border-color: $border;
+                }
+            }
+            @at-root [data-theme-version="dark"] & {
+                background: $d-bg;
+            }
+        }
+    }
+    
+
+    
+}
+
+
+[data-sidebar-style="compact"] {
+    .header-left {
+        margin-left: 0;
+    }
+}

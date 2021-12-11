@@ -1,0 +1,34 @@
+
+[data-theme-version="dark"] {
+    .dropdown-menu {
+        background-color: $dark-card;
+    }
+
+    .dropdown-item {
+        &:hover, &:focus {
+            background-color: $d-bg;
+            color: $white;
+        }
+    }
+
+    .form-control {
+        background-color: $d-bg;
+        border-color: $d-border;
+        color: $white;
+    }
+    
+    .card {
+        background-color: $dark-card;
+    }
+    .card-title{
+        color: $d-ctd;
+    }
+    .card-footer{
+        border-color: $d-border;
+    }
+
+    
+
+
+
+}

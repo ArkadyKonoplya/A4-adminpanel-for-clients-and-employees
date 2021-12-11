@@ -1,0 +1,102 @@
+@import "../animate/animate.min.css";
+@import "../metismenu/css/metisMenu.min.css";
+
+@import "../abstracts/maps";
+
+
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin: 0;
+        padding: 0;
+    }
+    
+    &::before {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    max-width: 100%;
+}
+
+
+
+
+
+
+p{
+    line-height: 1.8;
+}
+
+a {
+    color: $primary;
+}
+
+#main-wrapper {
+    opacity: 0;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    position: relative;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.content-body {
+    .container-fluid {
+        padding: 2.5rem 3.75rem 0;
+
+        @include respond('desktop') {
+            padding: 1.5rem 1.5rem 0;
+        }
+        @include respond('phone-land') {
+            padding: 0.9375rem 0.9375rem 0;
+        }
+    }
+    .container {
+        padding: 30px 15px 0px;
+
+        @include respond('phone-land') {
+            padding: 1.5rem 1.5rem 0;
+            padding: 0.9375rem 0.9375rem 0;
+        }
+    }
+}
+
+
+
+//change bootstrap default button behaviour on :focus:active 😢
+.btn {
+    &-primary {
+        &:not(:disabled):not(.disabled) {
+            &:active, 
+            &.active {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.btn-primary, .badge-primary {
+    background-color: $primary;
+}
+

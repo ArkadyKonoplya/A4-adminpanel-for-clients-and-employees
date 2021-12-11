@@ -1,0 +1,133 @@
+// @import "../vendor/animate/animate.min.css";
+@import "../vendor/quixnav/quixnav.css";
+@import "../abstracts/maps";
+
+
+
+
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin: 0;
+        padding: 0;
+    }
+    
+    &::before {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    max-width: 100%;
+
+    // $body-bg-img-height: 100%;
+    
+    // &::after {
+    //     content: "";
+    //     height: $body-bg-img-height;
+    //     width: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     background-image: url('./../images/body/1.jpg');
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     background-position: 0;
+    //     background-attachment: fixed;
+    //     position: absolute;
+    //     z-index: -10;
+    // }
+
+    // &::before {
+    //     content: "";
+    //     height: $body-bg-img-height;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     position: absolute;
+    //     z-index: -9;
+
+    //     background: rgba(116, 104, 240,0.85)
+    // }
+}
+
+p{
+    line-height: 1.8;
+}
+
+.box-shadow-none{
+    box-shadow: none!important;
+}
+
+#main-wrapper {
+    opacity: 0;
+    transition: all 0.25s ease-in;
+    overflow: hidden;
+    position: relative;
+    // background: $body-bg;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: $body-color;
+    &:hover,&:focus,&.active{
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+// .content-body {
+//     .container-fluid {
+//         padding: 0 30px 0;
+
+//         @include media-breakpoint-down(sm) {
+//             padding: 0 1.5rem 0;
+//             padding: 0 0.9375rem 0;
+//         }
+//     }
+// }
+
+.content-heading {
+    font-size: 16px;
+    margin-bottom: 1.875rem;
+    margin-top: 3.125rem;
+    border-bottom: 1px solid $border;
+    padding-bottom: 10px;
+
+    @at-root [direction="rtl"] #{&} {
+        text-align: right;
+    }
+}
+
+
+
+//change bootstrap default button behaviour on :focus:active 😢
+.btn {
+    &-primary {
+        &:not(:disabled):not(.disabled) {
+            &:active, 
+            &.active {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

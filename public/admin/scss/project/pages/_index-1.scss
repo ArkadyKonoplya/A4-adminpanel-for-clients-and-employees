@@ -1,0 +1,252 @@
+.widget-stat{
+    background: $body-bg;
+    @at-root [data-theme-version="dark"] & {
+      background-color: $d-bg!important;
+  }
+    box-shadow: none;
+    .card-body{
+        background: #fff;
+        padding: 1rem 1.63rem;
+        margin: 0 20px;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+        @at-root [data-theme-version="dark"] & {
+          background-color: $dark-card;
+      }
+        h4{
+            margin-bottom: 10px;
+            
+        }
+        // span{
+        //     background: #fff;
+        //     padding: 3px 10px;
+        //     border-radius: 20px;
+        //     display: inline-block;
+        //   }
+    }
+    .chart-wrapper{
+        border-radius: 0.25rem;
+        box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+    }
+}
+
+.event-goals{
+    p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    @include custommq($min: 1200px, $max: 1400px) {
+        .progress {
+            margin-bottom: 15px!important;
+        }
+    }
+}
+
+#attend_event_1 canvas,
+#attend_event_2 canvas,
+#attend_event_3 canvas,
+#attend_event_4 canvas{
+    max-width: 100%;
+    height: 100%!important;
+    @include custommq($min: 1200px, $max: 1400px) {
+      // max-width: 80%;
+      // height: 80%!important;
+      // margin-bottom: 15px;
+  }
+}
+
+
+.event-attend{
+    text-align: center;
+    @include respond('tab-port') {
+        margin-bottom: 15px;
+    }
+    .attend-member{
+        position: relative;
+        display: inline-block;
+        h5{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 0;
+            text-align: center;
+            transform: translateY(-50%);
+            @include custommq($min: 1200px, $max: 1400px) {
+                font-size:14px;
+            }
+        }
+    }
+    h5{
+        margin-top: 10px;
+    }
+}
+
+.single-administrator {
+    background-color: rgba(105, 27, 204, 0.05);
+    box-shadow: none;
+
+    .card-body {
+        padding: 1.63rem;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+
+.event-detail-content .row {
+  padding: 10px 0px;
+}
+
+
+
+
+
+
+
+
+.event-card {
+    .card-header {
+      background: #fff;
+    //   padding: 15px 20px;
+    @include respond('big-desktop'){
+        padding-bottom: 2rem;
+    }
+    @at-root [data-theme-version="dark"] & {
+      background: $dark-card;
+  }
+    }
+    h4 {
+      font-size: 16px;
+      color: #18212c;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 12px;
+      color: #847577;
+      margin: 0;
+    }
+    .custom-dropdown {
+      padding: 10px;
+      padding-right: 0px;
+      cursor: pointer;
+      .dropdown-menu {
+        min-width: 7rem;
+      }
+      a {
+        font-size: 12px;
+      }
+    }
+    .event-card-img {
+      position: relative;
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+      h4 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+    }
+    .card-body {
+      h5 {
+        font-size: 14px;
+        color: #18212c;
+        font-weight: 700;
+      }
+      p {
+        font-size: 12px;
+        color: #847577;
+        @at-root [data-theme-version="dark"] & {
+            color:$d-ctl;
+        }
+      }
+    }
+    .card-sponsor {
+      background: #f9f9f9;
+      padding: 15px 20px;
+      @at-root [data-theme-version="dark"] & {
+        background: $dark-card;
+    }
+
+      h4 {
+        font-size: 14px;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .card-sponsor-img {
+        display: inline-block;
+        img{
+          width: 35px;
+        }
+      }
+      p {
+        color: #e53632;
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 6px;
+      }
+    }
+    .card-footer {
+      background: #FFF;
+      border-top: 0px;
+      padding: 20px;
+      @at-root [data-theme-version="dark"] & {
+        background: $dark-card;
+    }
+      ul {
+        display: inline-block;
+        margin-bottom: 0px;
+        li {
+          display: inline-block;
+          margin-right: 36px;
+        }
+      }
+      a {
+        font-size: 14px;
+        color: #18212c;
+        @at-root [data-theme-version="dark"] & {
+            color:$d-ctl;
+        }
+        i {
+          color: #b9b9b9;
+          margin-right: 5px;
+          @at-root [data-theme-version="dark"] & {
+            color:$d-ctl;
+        }
+        }
+      }
+    }
+  }
+
+
+
+  #chart_widget_1,
+  #chart_widget_2,
+  #chart_widget_3,
+  #chart_widget_04{
+      height: 100px!important;
+      @include custommq($min: 1200px, $max: 1450px) {
+        height: 75px!important;
+    }
+  }
+
+  #email_campaign{
+    height: 213px!important;
+  }
+
+  #doughnut_chart{
+    height: 200px!important;
+  }
+  #sales_overview{
+    height: 400px!important;
+  }

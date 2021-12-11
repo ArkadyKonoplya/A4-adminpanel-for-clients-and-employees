@@ -1,0 +1,1272 @@
+/* Base Css Start  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap');
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #727382;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 48px;
+}
+
+main section {
+    padding: 48px 0;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #333;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+a {
+    font-size: 16px;
+}
+
+.img {
+    max-width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+div[data-relative="yes"] {
+    position: relative;
+}
+
+
+/* Base Css End */
+
+
+/* header css start  */
+
+.header-area {
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background: #fff;
+}
+
+.header-flex-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-area .logo svg {
+    width: 100%;
+    max-width: 80px;
+}
+
+.header-area .logo {
+    flex: 0 0 136px;
+    background: #cb2233;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header-right a.sem-link {
+    margin-right: 40px;
+    display: block;
+    transition: .3s;
+    color: #1457c2;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Roboto Slab;
+}
+
+.header-right a.sem-link:hover {
+    color: #a81c2a;
+}
+
+
+/* header css end */
+
+
+/* hero-area css start  */
+.hero-area {
+	background: linear-gradient(rgba(54, 55, 68, 0.3),rgba(54, 55, 68, 0.8)), url('../img/hero-bg.webp');
+	padding: 52px 0;
+	background-size: cover;
+	background-position: center;
+}
+.hero-left-content h1 {
+	color: #fff;
+	font-size: 48px;
+	line-height: 60px;
+	margin-bottom: 24px;
+	margin-top: 220px;
+}
+.fea-quick-list li {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 300;
+    position: relative;
+    padding-left: 16px;
+  }
+  .fea-quick-list li::before {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    color: ;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .input-inside {
+	position: relative;
+	margin-bottom: 30px;
+}
+.input-inside input {
+	width: 100%;
+	height: 44px;
+	border: 2px solid #B8BBC4;
+	padding: 0 15px;
+	border-radius: 5px;
+	transition: .3s;
+	font-size: 15px;
+	color: #4D85F0;
+}
+
+.input-inside.invalid-field input {
+    border-color: #F65353;
+    color: #F65353;
+}
+
+.input-inside.invalid-field input~label {
+    color: #F65353;
+}
+
+.input-inside.invalid-field input:focus~label {
+    color: #F65353;
+}
+
+.input-inside input:focus {
+    border-color: #4D85F0;
+}
+
+.input-inside.invalid-field input:focus {
+    border-color: #F65353;
+}
+
+.input-inside::after {
+    content: "This field is required";
+    position: absolute;
+    bottom: -21px;
+    color: #F65353;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    display: block;
+}
+
+.input-inside.invalid-field::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.input-inside.with-select .nice-select {
+	width: 100%;
+	border: 2px solid #B8BBC4;
+	font-size: 16px;
+	font-weight: 500;
+	height: 44px;
+	line-height: 41px;
+}
+.nice-select.sl-select::after {
+	border-width: ;
+	width: 7px;
+	height: 7px;
+}
+.nice-select.sl-select ul.list {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #A6A6A6 transparent;
+}
+
+.nice-select.sl-select ul.list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.nice-select.sl-select ul.list::-webkit-scrollbar-thumb {
+    background-color: #A6A6A6;
+    border-radius: 15px;
+}
+
+.input-inside.with-select {
+    min-height: 40px;
+}
+
+#hero-form {
+	background: #fff;
+	padding: 35px 25px;
+	min-height: 424.6px;
+}
+.input-inside > label {
+	position: absolute;
+	font-size: 16px;
+	top: 10px;
+	left: 10px;
+	transition: .3s;
+	font-family: Roboto;
+	font-weight: 500;
+	margin: 0;
+	display: inline-block;
+	background: #fff;
+	padding: 0 5px;
+}
+
+.input-inside input:focus~label,
+.input-inside.inputted input~label {
+    font-size: 13px;
+    font-weight: normal;
+    top: -8px;
+    color: #4D85F0;
+}
+
+.input-inside.inputted input~label {
+    color: #727382;
+}
+
+.input-inside.inputted input {
+    color: #727382;
+}
+
+.input-inside.invalid-field input~label {
+    /* color: #F65353;
+	font-size: 13px;
+	font-weight: normal;
+	top: -8px; */
+}
+
+.input-inside.invalid-email::after {
+    content: "Invalid Email";
+}
+
+.input-inside.invalid-phone::after {
+    content: "Enter a valid number, only digits";
+}
+
+.input-inside.invalid-char::after {
+    content: "Remove the Special Character";
+}
+
+.checkBox {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 30px;
+    font-family: Roboto;
+}
+
+.checkBox a {
+    color: #aaaaaa;
+    display: inline-block;
+    font-size: 16px;
+}
+.submit-btn-wrap {
+	text-align: center;
+}
+
+/* Hide the browser's default checkbox */
+
+.checkBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background: transparent;
+    border: 2px solid #757575;
+    border-radius: 3px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkBox input:checked~.checkmark {
+    background-color: #363744;
+    border-color: #363744;
+}
+
+.checkBox.radioBtn input:checked~.checkmark {
+    background-color: transparent;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkBox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkBox .checkmark::after {
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.round-btn {
+    background: #BBBDC4;
+    border: 2px solid #BBBDC4;
+    transition: .3s;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: ;
+    padding: 7px 25px;
+    border-radius: 30px;
+}
+
+.round-btn:hover {
+    color: #BBBDC4;
+    background: #fff;
+}
+.primary-title {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.ok-img {
+    background-color: rgba(93, 205, 196, .15);
+    border: 2px solid #5dcdc4;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ok-img img {
+    max-width: 24px;
+}
+
+.submission-message-wrap h3 {
+    color: #363744;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.submission-message-wrap {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    display: none;
+    padding-top: 57px;
+}
+
+.submission-message-wrap p {
+    color: #727382;
+    font-size: 15px;
+    font-family: Roboto;
+}
+
+#rq-quote {
+    background: #BBBDC4;
+    border-color: #BBBDC4;
+    cursor: no-drop;
+}
+
+#rq-quote.active-btn {
+    background: #cb2233;
+    border-color: #cb2233;
+    color: #fff;
+    cursor: pointer;
+}
+
+#rq-quote.active-btn:hover {
+    background: #F13D4F !important;
+    border-color: #F13D4F !important;
+}
+
+#rq-quote:hover {
+    color: #fff;
+}
+
+
+/* hero-area css end */
+
+
+/* feature-area css start  */
+
+.sec-middle-img img {
+    max-width: 428px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-middle-img {
+    text-align: center;
+    flex: 0 0 100%;
+}
+
+.feature-area {
+    padding-top: 144px;
+}
+
+.primary-title.black {
+    color: #363744;
+}
+
+.section-content-wrapper .primary-title {
+    margin-bottom: 35px;
+}
+
+.feature-list li {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.feature-list li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #BBBDC4;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+
+/* feature-area css end */
+
+
+/* brand-area css start  */
+
+.brand-area {
+    margin: 16px 0;
+}
+
+.all-brand-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.all-brand-picture picture img {
+    max-width: 85px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.all-brand-picture picture img:hover {
+    transform: scale(1.09);
+}
+
+.all-brand-picture picture {
+    text-align: center;
+}
+
+.brand-logo-container {
+    box-shadow: 0 1.25rem 2.5rem -1rem rgba(21, 21, 49, .15);
+    padding-bottom: 35px;
+    padding-top: 30px;
+}
+
+.primary-title.black.light {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+
+/* brand-area css end */
+
+
+/* feature-area.two css start  */
+
+.section-content-wrapper.two .primary-title {
+    margin-bottom: 15px;
+}
+
+.secondary-title {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.section-content-wrapper.two p {
+    margin-bottom: 20px;
+}
+
+.round-btn.red-bg {
+    background: #cb2233;
+    border-color: #cb2233;
+}
+
+.round-btn.red-bg:hover {
+    background: #F13D4F;
+    color: #fff;
+    border-color: #F13D4F;
+}
+
+.section-content-wrapper.two .feature-list {
+    margin-bottom: 20px;
+}
+
+.feature-area.two {
+    padding-top: 48px;
+}
+
+
+/* feature-area.two css end */
+
+
+/* leading-area css start  */
+
+.primary-title.mb-40 {
+    margin-bottom: 40px;
+}
+.leading-area {
+	background: #F8F9FA;
+}
+.leading-g-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 55px;
+    grid-column-gap: 140px;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.leading-icon img {
+    max-width: 130px;
+}
+.leading-single-item h5 {
+	color: rgba(0,0,0,.7);
+	font-size: 24px;
+	font-weight: normal;
+	margin-bottom: 18px;
+}
+.leading-single-item p {
+	color: rgba(0,0,0,.7);
+	font-weight: 400;
+}
+
+.leading-icon {
+    margin-bottom: 20px;
+}
+.leading-area .primary-title {
+	color: rgba(0,0,0,.7);
+}
+
+/* leading-area css end */
+
+
+/* feature-area.two.expand css start  */
+
+.blockcode {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 300;
+    color: #363744;
+    font-family: Roboto;
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.writter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.case-study-link {
+    display: inline-block;
+    position: relative;
+    color: #363744;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.case-study-link svg {
+    width: 13px;
+    margin-left: 3px;
+    transition: .3s;
+}
+
+.writter-wrapper p {
+    color: #727382;
+    font-size: ;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.case-study-link>span {
+    position: relative;
+}
+
+.case-study-link>span::after {
+    width: 10%;
+    height: 1px;
+    background: #363744;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.case-study-link:hover>span::after {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.case-study-link:hover {
+    color: #363744;
+}
+
+.case-study-link:hover svg {
+    transform: translateX(4px);
+}
+
+.quotetion-wrapper {
+    max-width: 1115px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.section-content-wrapper.two {
+    padding-left: 115px;
+}
+
+.inverted-comma {
+    position: absolute;
+    width: 56px;
+    left: -70px;
+    top: -16px;
+    transform: rotateZ(180deg);
+}
+
+.right-pattern-bg {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* feature-area.two.expand css end */
+
+
+/* resource-area css start  */
+
+.rc-image {
+    position: relative;
+}
+
+.rc-image-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    font-size: 13px;
+    font-family: Roboto;
+    color: #727382;
+    font-weight: 700;
+    padding: 1px 8px;
+    padding-right: 15px;
+}
+
+.rc-image-tag a img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.rc-image a {
+    display: block;
+}
+
+.rc-image a img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.resource-area {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 18px;
+}
+
+.resource-area::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background: #393A47;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .9;
+    z-index: 0;
+}
+
+.resource-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+.rc-content {
+    background: #fff;
+    padding: 24px;
+}
+
+.rc-content h5 {
+    margin: 0;
+}
+
+.rc-content h5 a {
+    color: #363744;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/* resource-area css end */
+
+
+/* login-page css start  */
+
+.checkBox {
+    display: block;
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 11px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #333;
+    font-weight: 300;
+}
+
+.checkBox a {
+    color: #aaaaaa;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 11px;
+    width: 11px;
+    background: transparent;
+    border: 1px solid #1485e4;
+    border-radius: 2px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkBox input:checked~.checkmark {
+    background-color: #1485e4;
+    border-color: #1485e4;
+}
+
+.checkBox.radioBtn input:checked~.checkmark {
+    background-color: transparent;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkBox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkBox .checkmark::after {
+    left: 3px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.login-outer-wrapper-box {
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.site-logo svg {
+    width: 99px;
+}
+
+.login-g-wrapper {
+    display: grid;
+    grid-template-columns: 310px auto;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.login-rg-wrapper>img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.login-rg-wrapper {
+    position: relative;
+}
+
+.login-lf-wrapper {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    padding-bottom: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btm-part {
+    position: absolute;
+    background: #ECEFF2;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btm-part a {
+    color: #2a3a4b;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+    display: block;
+    text-align: center;
+}
+
+.btm-part a:hover {
+    text-decoration: underline;
+    color: #2a3a4b;
+}
+
+.trans-content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.trans-content-wrapper p {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.trans-content-wrapper h4 {
+    color: #fff;
+    font-family: Nunito;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.twin-store-link-btns a {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.twin-store-link-btns a:hover {
+    border-color: #adadad;
+}
+
+.twin-store-link-btns a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.login-lf-wrapper .input-inside input {
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    background: #fff;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 50px;
+    color: #999;
+}
+
+.login-lf-wrapper .input-inside input:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.login-lf-wrapper .input-inside input::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.login-lf-wrapper .input-inside input::-webkit-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.login-lf-wrapper .input-inside {
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    width: 39px;
+    height: 38px;
+    left: 1px;
+    top: 1px;
+    background: #ECEFF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.input-icon img {
+    max-width: 15px;
+}
+
+.login-button button {
+    background: #1485e4;
+    width: 100%;
+    border: 0;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.login-button button:hover {
+    background: #6AAFEC;
+}
+
+.term-p {
+    color: #778899;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 1px;
+}
+
+.term-p a {
+    color: #778899;
+    font-size: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration: underline;
+}
+
+.term-p a:hover {
+    color: #778899;
+}
+
+.forget-twin-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forget-twin-wrap a {
+    color: #2a3a4b;
+    font-size: 11px;
+    transition: .3s;
+}
+
+.forget-twin-wrap a:hover {
+    text-decoration: underline;
+}
+
+.top-part {
+    flex: 0 0 100%;
+}
+
+.login-lf-wrapper .input-inside.invalid-field {
+    margin-bottom: 28px;
+}
+.form-inner-field .checkBox {
+	color: #727382;
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: 20px;
+	padding-left: 35px;
+	margin-bottom: 16px;
+}
+#hero-form .input-inside.with-select {
+	margin-bottom: 20px;
+}
+.form-inner-field .checkBox .checkmark {
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(114,115,130,.75);
+	top: 0px;
+	border-radius: 2px;
+}
+.form-inner-field .checkBox input:checked ~ .checkmark {
+	background-color: #4D85F0;
+	border-color: #4D85F0;
+}
+.form-inner-field .checkBox .checkmark::after {
+	left: 6px;
+	top: 1px;
+	width: 5px;
+	height: 11px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.hero-right-content {
+    padding-top: 4px;
+}
+
+.rc-image-tag {
+    line-height: 2.2rem;
+}
+
+div.rc-image {
+    overflow: hidden;
+}
+
+span.rc-image-tag {
+    z-index: 1;
+    padding-right: 0px;
+}
+
+span.rc-image-tag::after {
+    right: -.6rem;
+    transform: skewX(-30deg);
+    box-shadow: 0.625rem 0.125rem 1.25rem rgba(0, 0, 0, .125), -2.5rem 0.125rem 1.5rem #fff;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: white;
+}
+
+span.rc-image-tag::before {
+    left: 0;
+    right: -.5rem;
+    transform: skewX(-30deg);
+    box-shadow: 0.625rem 0.125rem 1.25rem rgba(0, 0, 0, .125), -2.5rem 0.125rem 1.5rem #fff;
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: white;
+}
+
+span.Re-boxshadow {
+    z-index: 9;
+}

@@ -1,0 +1,35 @@
+
+[data-theme-version="dark"] {
+    .dropdown-menu {
+        background-color: $dark-card;
+    }
+
+    .dropdown-item {
+        &:hover, &:focus {
+            background-color: $d-bg;
+            color: $white;
+        }
+    }
+
+    .form-control {
+        background-color: $d-bg;
+        border-color: $d-border;
+        color: $white;
+    }
+    
+    .card {
+        background-color: $dark-card;
+    }
+
+    .calendar-title th{
+        background: rgba(105, 27, 204, 0.15);
+        border-bottom: 1px solid $d-border;
+        color: #ddd;
+    }
+    .calendar tbody tr td.pad{
+        background: transparent;
+    }
+
+    
+
+}

@@ -1,0 +1,23 @@
+[data-sidebar-position="fixed"][data-layout="vertical"] {
+    .nav-header {
+        position: fixed;
+        left: auto;
+    }
+
+    .quixnav {
+        position: fixed;
+        // z-index: 0;
+    }
+
+    .menu-toggle {
+        .quixnav {
+            position: fixed;
+        }
+    }
+}
+
+[data-header-position="fixed"][data-sidebar-position="fixed"][data-sidebar-style="overlay"][data-layout="vertical"][data-container="boxed"] {
+    .quixnav {
+        position: absolute;
+    }
+}

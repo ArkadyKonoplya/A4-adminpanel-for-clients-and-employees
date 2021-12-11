@@ -1,0 +1,9 @@
+[18-Aug-2020 15:34:25 UTC] PHP Warning:  Uncaught ErrorException: require_once(simple_html_dom.php): failed to open stream: No such file or directory in /home/xg5w4x9musrn/public_html/8x8/resources/views/scrapping.php:2
+Stack trace:
+#0 /home/xg5w4x9musrn/public_html/8x8/resources/views/scrapping.php(2): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(si...', '/home/xg5w4x9mu...', 2, Array)
+#1 /home/xg5w4x9musrn/public_html/8x8/resources/views/scrapping.php(2): require_once()
+#2 /home/xg5w4x9musrn/public_html/8x8/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(41): include('/home/xg5w4x9mu...')
+#3 /home/xg5w4x9musrn/public_html/8x8/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(19): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/xg5w4x9mu...', Array)
+#4 /home/xg5w4x9musrn/public_html/8x8/vendor/facade/ignition/src/Views/Engines/PhpEngine.php(25): Illuminate\View\Engines\PhpEngine->get('/home/xg5w4x9mu...', Array)
+#5 /home/xg5w4x9musrn/public_html/8x8/vendor/laravel/framewor in /home/xg5w4x9musrn/public_html/8x8/resources/views/scrapping.php on line 2
+[18-Aug-2020 15:34:25 UTC] PHP Fatal error:  Illuminate\View\Engines\PhpEngine::main(): Failed opening required 'simple_html_dom.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/xg5w4x9musrn/public_html/8x8/resources/views/scrapping.php on line 2

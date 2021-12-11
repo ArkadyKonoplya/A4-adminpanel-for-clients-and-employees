@@ -1,0 +1,152 @@
+//background for nav header
+@each $name, $color in $theme_backgrounds {
+    [data-nav-headerbg="#{$name}"] {
+        @if $name != "color_1"  {
+            .nav-header {
+                background-color: $color;
+
+                .brand-logo {
+                    color: $white;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//background for header 
+@each $name, $color in $theme_backgrounds {
+    [data-headerbg="#{$name}"] {
+
+        @if $name != "color_1"  {
+            .header {
+                background-color: $color;
+                color: $white;
+            }
+
+            .header-left {
+                input {
+                    border-color: lighten($color: $color, $amount: 10%);
+                    background-color: lighten($color: $color, $amount: 10%);
+                    color: $white;
+                    // border-right-color: transparent;
+
+                    &::placeholder {
+                        color: $white;
+                    }
+
+                    &:focus {
+                        border-color: darken($color: $color, $amount: 10%);
+                    }
+                }
+
+                .btn {
+                    background-color: darken($color: $color, $amount: 10%);
+                    border-color: darken($color: $color, $amount: 10%);
+
+                    &:hover, 
+                    &:focus, 
+                    &:active {
+                        background-color: darken($color: $color, $amount: 20%);
+                        border-color: darken($color: $color, $amount: 20%);
+                    }
+                }
+            }
+
+            .header-right {
+                .dropdown {
+                    &>a {
+                        color: $white;
+                    }
+                }
+            }
+
+            .nav-control {
+                background-color: darken($color: $color, $amount: 10%);
+                color: $white;
+            }
+        }
+    }
+}
+
+//styles for sidebar
+@each $name, $color in $theme_backgrounds {
+//:not([data-sidebar-style="modern"])
+    [data-sibebarbg="#{$name}"] {
+        @if $name != "color_1" {
+            .quixnav {
+                background-color: $color;
+
+                .metismenu {
+                    &>li {
+                        &>a {
+                            color: lighten($color: $color, $amount: 60%);
+                            i{
+                                color:lighten($color: $color, $amount: 40%);
+                            }
+                        }
+
+                        &:hover, 
+                        &:focus, 
+                        &.mm-active {
+            
+                            &>a {
+                                background-color: darken($color: $color, $amount: 0.75%);
+                                color: lighten($color: $color, $amount: 75%);
+            
+                                // &::after {
+                                //     border-color: transparent transparent $white transparent;
+                                // }
+                            }
+                        }
+
+                        @at-root [data-layout="horizontal"]#{&} {
+                            // &:not(:last-child) {
+                                border-color: lighten($color: $color, $amount: 10%);
+                            // }
+                        }
+                    }
+
+                    a {
+                        color: lighten($color: $color, $amount: 40%);
+
+                        &:hover, 
+                        &:focus, 
+                        &.mm-active {
+                            color: $white;
+                        }
+                    }
+
+                    ul {
+                        background-color: lighten($color: $color, $amount: 2%);
+                        // background-color: red!important;
+                        li{
+                            &:after{
+                                background: lighten($color: $color, $amount: 40%);
+                            }
+                        }
+                    }
+
+                    .has-arrow {
+                        &:after {
+                            border-color: initial;
+                            opacity: 0.9;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+[data-headerbg="transparent"]{
+    .header{
+        box-shadow: none;
+        background: transparent;
+    }
+}
+
+

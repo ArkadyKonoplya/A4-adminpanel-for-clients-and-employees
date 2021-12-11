@@ -1,0 +1,207 @@
+[data-sidebar-style="mini"], [data-layout="horizontal"] {
+    .nav-control {
+        display: none;
+    }
+}
+
+[data-sidebar-style="overlay"] {
+    @include respond('phone-land') {
+        .nav-header .logo-abbr {
+            display: block;
+        }
+    }
+}
+
+
+[data-header-position="fixed"] {
+    .nav-header {
+        position: fixed;
+        left: auto;
+    }
+ }
+
+ 
+.nav-header {
+    height: 5rem;
+    width: 17.1875rem;
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $white;
+    transition: all .2s ease;
+    z-index: 999;
+
+    .logo-abbr {
+        display: none;
+    }
+
+    .logo-compact {
+        display: none;
+    }
+
+
+    @include custommq($min: 1200px, $max: 1350px) {
+        width: 14.375rem;
+    }
+
+    .brand-logo {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.125rem;
+        color: $primary;
+        text-decoration: none;
+        padding-left: 2.5rem;
+        font-weight: 700;
+
+        &:hover {
+            color: $primary;
+        }
+
+        [data-sidebar-style="compact"] &, 
+        [data-sidebar-style="mini"] & {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+
+        @include respond('phone-land') {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+    }
+
+    .brand-title {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        @at-root [data-theme-version="dark"] & {
+            background-position: 0 120%;
+        }
+    }
+}
+
+.nav-control {
+    cursor: pointer;
+    position: absolute;
+    right: -3.5rem;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    // background-color: $primary;
+    color: $primary;
+    font-size: 1.4rem;
+    // line-height: 2rem;
+    padding: 2px 0.5rem 0;
+    // margin-top: 5px;
+    border-radius: 2px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: $border;
+        height: 80px;
+        width: 1px;
+        right: -20px;
+        top: -23px;
+        @at-root [data-theme-version="dark"] & {
+            background: $d-border;
+        }
+    }
+
+    @include respond('phone-land') {
+        right: -3rem;
+    }
+
+    @include respond('phone') {
+        right: -2.5rem;
+    }
+}
+
+
+////////////////////
+// Humbuger Icon
+////////////////////
+
+@media (min-width:767px) {
+    [data-sidebar-style="compact"] {
+        
+        .nav-control {
+            display: none;
+        }
+
+        .nav-header {
+            width: 9.375rem;
+        }
+    }
+}
+
+[data-sidebar-style="full"][data-layout="vertical"] {
+    .menu-toggle {
+        
+        .brand-title {
+            display: none;
+        }
+
+        .nav-header {
+            .logo-abbr {
+                display: block;
+            }
+        }
+    }
+}
+
+[data-sidebar-style="full"][data-layout="horizontal"] {
+
+    .nav-header {
+        .logo-abbr {
+            display: none;
+        }
+    }
+
+    .logo-compact {
+        display: none;
+    }
+}
+
+[data-sidebar-style="mini"] {
+    .nav-header {
+        .logo-abbr {
+            display: block;
+        }
+    }
+}
+
+[data-sidebar-style="compact"] {
+    .nav-header {
+        
+        .brand-title {
+            display: none;
+        }
+
+        .logo-compact {
+            display: block;
+        }
+    }
+}
+
+[data-sidebar-style="modern"][data-layout="vertical"] {
+    .nav-header {
+        width: 9.375rem;
+        
+        .brand-title {
+            display: none;
+        }
+
+        .logo-compact {
+            display: block;
+        }
+    }
+}
